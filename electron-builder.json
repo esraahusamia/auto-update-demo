@@ -1,0 +1,25 @@
+{
+    "productName": "Auto updater",
+    "appId": "com.example.electronuploader",
+    "directories": {
+      "output": "build/${version}"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "private": true,
+        "owner": "esraahusamia",
+        "repo": "auto-update-demo",
+        "token": "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"
+      }
+    ],
+    "files": [
+      "dist/electron/**/*"
+    ],
+ 
+ 
+    "win": {
+      "icon": "build/icon.png"
+    }
+    
+  }

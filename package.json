@@ -1,0 +1,59 @@
+{
+  "name": "auto-update-demo",
+  "productName": "Auto updater",
+  "version": "1.0.1",
+  "description": "test",
+  "main": "main.js",
+  "private": true,
+  "build": {
+    "asar": true,
+    "appId": "com.example.electronuploader",
+    "productName": "Autoupdater Demo",
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ],
+      "icon": "build/icon.png",
+      "publish": [
+        "github"
+      ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "private": true,
+        "owner": "esraahusamia",
+        "repo": "auto-update-dem",
+        "token": "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"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "deploy": "electron-builder -p always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esraahusamia/auto-update-demo.git"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "esraahusamia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esraahusamia/auto-update-demo/issues"
+  },
+  "homepage": "https://github.com/esraahusamia/auto-update-demo#readme",
+  "devDependencies": {
+    "electron": "^19.0.3",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "electron-is-dev": "^2.0.0",
+    "electron-log": "^4.4.7",
+    "electron-updater": "^5.0.1"
+  }
+}
