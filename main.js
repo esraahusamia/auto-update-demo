@@ -21,7 +21,9 @@ function createWindow () {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-    },
+      contextIsolation: false,
+      enableRemoteModule: false, // turn off remote
+        },
   });
   mainWindow.loadFile('index.html');
   mainWindow.on('closed', function () {
@@ -33,7 +35,7 @@ function createWindow () {
 }
 setInterval(() => {
     autoUpdater.checkForUpdatesAndNotify();
-  }, 3000);
+  }, 6000);
 
 app.on('ready', () => {
   createWindow();
